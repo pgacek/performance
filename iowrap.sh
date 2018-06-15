@@ -21,7 +21,7 @@ echo "time ; memtotal ; memfree ; membuff ; memcache" > /tmp/mem_stats_${DATE}.c
 ##########
 
 cat /tmp/disk_stats_raw | awk '{ time=$1 ; iops=$4+$5 ; read=$6/1024 ; write=$7/1024 ; await=$10 ; quesi=$9 } { print time ";" iops ";" read ";" write ";"  await ";" quesi }' >>  /tmp/disk_stats_${DATE}.csv 
-cat /tmp/mem_stats_raw | awk '{ time=$1 ; memtotal=$2+$3 memfree=$3/1024 ; membuff=$6/1024 ; memcache=$7/1024 } { print time ";" memtotal ";" memfree ";" membuff ";" memcache }' >> /tmp/mem_stats_${DATE}.csv 
+cat /tmp/mem_stats_raw | awk '{ time=$1 ; memtotal=$2+$3 ; memfree=$3/1024 ; membuff=$6/1024 ; memcache=$7/1024 } { print time ";" memtotal ";" memfree ";" membuff ";" memcache }' >> /tmp/mem_stats_${DATE}.csv 
 cat /tmp/cpu_stats_raw | awk '{ time=$1 ; usert=$3 ; systemt=$5 ; iowait=$6 } { print time ";" usert ";" systemt ";" iowait }' >> /tmp/cpu_stats_${DATE}.csv 
 
 
