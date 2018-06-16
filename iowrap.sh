@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 DATE=$(date +%Y%m%d_%H%M)
 #sar 24h format.
