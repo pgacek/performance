@@ -1,4 +1,4 @@
-# performance
+# performance statistics 
 tool to monitor some linux basic statistics - like iops, cpu time, read/write, etc..
 automatically exports those stats to csv file in your $HOME dir
 
